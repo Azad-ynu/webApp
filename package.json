@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "type": "module",
+  "homepage": "https://azad-ynu.github.io",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -12,7 +13,8 @@
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
-    "homepage": "https://azad-ynu.github.io"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "MD ABUL KALAM AZAD RAJU",
   "license": "ISC",
